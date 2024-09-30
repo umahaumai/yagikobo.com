@@ -5,14 +5,14 @@ import type { PaletteMode } from '@mui/material/styles';
 import * as React from 'react';
 
 interface ToggleColorModeProps extends IconButtonProps {
-	mode: PaletteMode;
-	toggleColorMode: () => void;
+  mode: PaletteMode;
+  toggleColorMode: () => void;
 }
 
 export default function ToggleColorMode({ mode, toggleColorMode, ...props }: ToggleColorModeProps) {
-	return (
-		<IconButton onClick={toggleColorMode} color="primary" size="small" aria-label="Theme toggle button" {...props}>
-			{mode === 'dark' ? <WbSunnyRoundedIcon fontSize="small" /> : <ModeNightRoundedIcon fontSize="small" />}
-		</IconButton>
-	);
+  return (
+    <IconButton onClick={toggleColorMode} color="primary" size="small" aria-label="Theme toggle button" {...props}>
+      {mode === 'dark' ? <WbSunnyRoundedIcon fontSize="small" /> : <ModeNightRoundedIcon fontSize="small" />}
+    </IconButton>
+  );
 }
