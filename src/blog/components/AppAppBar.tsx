@@ -1,3 +1,4 @@
+import { useApp } from '@/contexts/siteContext';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
@@ -10,8 +11,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import { alpha, styled } from '@mui/material/styles';
+import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
-import Sitemark from './SitemarkIcon';
+import ToggleColorMode from './ToggleColorMode';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -29,9 +31,15 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
-
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
+  };
+
+  const { useThemeMode, useAppDispach } = useApp();
+  const mode = useThemeMode();
+  const { setThemeMode } = useAppDispach();
+  const toggleColorMode = () => {
+    setThemeMode(mode === 'dark' ? 'light' : 'dark');
   };
 
   return (
@@ -41,31 +49,31 @@ export default function AppAppBar() {
         boxShadow: 0,
         bgcolor: 'transparent',
         backgroundImage: 'none',
-        mt: 10,
+        mt: 4,
       }}
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <Sitemark />
+            <StaticImage src="../..//images/logo.png" alt="logo" width={40} height={40} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Features
+              <Button variant="text" color="info" size="small" href="/">
+                トップ
               </Button>
               <Button variant="text" color="info" size="small">
-                Testimonials
+                会社情報
               </Button>
               <Button variant="text" color="info" size="small">
-                Highlights
+                ニュース
               </Button>
               <Button variant="text" color="info" size="small">
-                Pricing
+                製品・サービス
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                FAQ
+                代表ブログ
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Blog
+                お問い合わせ
               </Button>
             </Box>
           </Box>
@@ -76,12 +84,7 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
-            <Button color="primary" variant="text" size="small">
-              Sign in
-            </Button>
-            <Button color="primary" variant="contained" size="small">
-              Sign up
-            </Button>
+            <ToggleColorMode data-screenshot="toggle-mode" mode={mode} toggleColorMode={toggleColorMode} />
           </Box>
           <Box sx={{ display: { sm: 'flex', md: 'none' } }}>
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
