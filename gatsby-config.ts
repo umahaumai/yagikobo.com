@@ -1,9 +1,9 @@
-import type { GatsbyConfig } from 'gatsby'
+import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `yagikobo.com`,
-    siteUrl: `https://yagikobo.com`,
+    title: 'yagikobo.com',
+    siteUrl: 'https://yagikobo.com',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -11,7 +11,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
         trackingIds: ['G-9ZJW5T93CE'],
         pluginConfig: {
@@ -47,6 +47,6 @@ const config: GatsbyConfig = {
       __key: 'pages',
     },
   ],
-}
+};
 
-export default config
+export default config;
