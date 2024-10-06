@@ -13,7 +13,7 @@ interface TemplateFrameProps {
 export default function TemplateFrame({ children }: TemplateFrameProps) {
   const { useThemeMode } = useApp();
   const mode = useThemeMode();
-  const blogTheme = createTheme(getBlogTheme(mode));
+  const blogTheme = React.useMemo(() => createTheme(getBlogTheme(mode)), [mode]);
 
   return (
     <ThemeProvider theme={blogTheme}>

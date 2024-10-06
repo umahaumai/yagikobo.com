@@ -15,7 +15,7 @@ export const App = ({ children }: AppProps) => (
   <AppProvider>
     <Theme>
       <AppAppBar />
-      <Container maxWidth="lg" component="main" sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}>
+      <Container maxWidth="md" component="main" sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}>
         {children}
       </Container>
     </Theme>

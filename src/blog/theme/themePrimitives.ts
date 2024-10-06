@@ -1,3 +1,4 @@
+import { tableCellClasses } from '@mui/material';
 import { type PaletteMode, type Shadows, alpha, createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/Paper' {
@@ -185,7 +186,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
       },
     },
     typography: {
-      fontFamily: ['"Inter", "sans-serif"'].join(','),
+      fontFamily: '"Noto Sans JP", sans-serif, "Inter"',
       h1: {
         fontSize: defaultTheme.typography.pxToRem(48),
         fontWeight: 600,

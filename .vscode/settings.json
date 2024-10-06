@@ -16,5 +16,33 @@
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "cSpell.words": ["Theme"]
+  "cSpell.words": [
+    "biome",
+    "contexts",
+    "correctness",
+    "couldn’t",
+    "creating",
+    "determine",
+    "Divider",
+    "Drawer",
+    "gatsby",
+    "getting",
+    "Gutters",
+    "icons",
+    "logo",
+    "Night",
+    "outlined",
+    "pages",
+    "Palette",
+    "Prefers",
+    "Props",
+    "Rounded",
+    "Sorry",
+    "started",
+    "Styled",
+    "Sunny",
+    "Theme",
+    "there",
+    "Typography"
+  ]
 }

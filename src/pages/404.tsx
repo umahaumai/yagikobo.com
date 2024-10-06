@@ -27,10 +27,9 @@ const codeStyles = {
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+      <h1 style={headingStyles}>お探しのページが見つかりません。</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
+        当サイトをご覧頂きありがとうございます。
         {process.env.NODE_ENV === 'development' ? (
           <>
             <br />

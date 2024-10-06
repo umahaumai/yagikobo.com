@@ -11,6 +11,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import { alpha, styled } from '@mui/material/styles';
+import { navigate } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import ToggleColorMode from './ToggleColorMode';
@@ -35,11 +36,16 @@ export default function AppAppBar() {
     setOpen(newOpen);
   };
 
-  const { useThemeMode, useAppDispach } = useApp();
+  const { useThemeMode, useAppDispatch } = useApp();
   const mode = useThemeMode();
-  const { setThemeMode } = useAppDispach();
+  const { setThemeMode } = useAppDispatch();
   const toggleColorMode = () => {
     setThemeMode(mode === 'dark' ? 'light' : 'dark');
+  };
+
+  const handleMenuClick = (href: string) => {
+    navigate(href);
+    setOpen(false);
   };
 
   return (
@@ -55,24 +61,28 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <StaticImage src="../..//images/logo.png" alt="logo" width={40} height={40} />
+            {mode === 'dark' ? (
+              <StaticImage src="./images/logo-dark.png" alt="logo" width={40} height={40} />
+            ) : (
+              <StaticImage src="./images/logo-light.png" alt="logo" width={40} height={40} />
+            )}
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small" href="/">
+              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/')}>
                 トップ
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/company/')}>
                 会社情報
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/info/')}>
                 ニュース
               </Button>
-              <Button variant="text" color="info" size="small">
+              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/product/')}>
                 製品・サービス
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/blog/')}>
                 代表ブログ
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+              <Button variant="text" color="info" size="small">
                 お問い合わせ
               </Button>
             </Box>
@@ -87,6 +97,13 @@ export default function AppAppBar() {
             <ToggleColorMode data-screenshot="toggle-mode" mode={mode} toggleColorMode={toggleColorMode} />
           </Box>
           <Box sx={{ display: { sm: 'flex', md: 'none' } }}>
+            <ToggleColorMode
+              data-screenshot="toggle-mode"
+              size="medium"
+              sx={{ mr: 1 }}
+              mode={mode}
+              toggleColorMode={toggleColorMode}
+            />
             <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
@@ -96,7 +113,7 @@ export default function AppAppBar() {
                   sx={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between',
+                    justifyContent: 'end',
                   }}
                 >
                   <IconButton onClick={toggleDrawer(false)}>
@@ -104,22 +121,12 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
-                  </Button>
-                </MenuItem>
-                <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
-                  </Button>
-                </MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/')}>トップ</MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/company')}>会社情報</MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/info')}>ニュース</MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/product')}>製品・サービス</MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/blog')}>代表ブログ</MenuItem>
+                <MenuItem>お問い合わせ</MenuItem>
               </Box>
             </Drawer>
           </Box>

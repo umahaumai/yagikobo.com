@@ -211,6 +211,16 @@ export const dataDisplayCustomizations: Components<Theme> = {
       },
     },
   },
+  MuiTableCell: {
+    styleOverrides: {
+      root: {
+        fontSize: 'medium',
+      },
+      head: {
+        fontWeight: 600,
+      },
+    },
+  },
   MuiIcon: {
     defaultProps: {
       fontSize: 'small',

@@ -5,7 +5,7 @@ import { createStoreContext, useSelector } from './store';
 const Context = createContext<AppContextProps | undefined>(undefined);
 export const useApp = () => useContext(Context) as AppContextProps;
 interface AppContextProps {
-  useAppDispach: () => {
+  useAppDispatch: () => {
     setThemeMode: (themeMode: PaletteMode) => void;
   };
   useThemeMode: () => PaletteMode;
@@ -41,7 +41,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
   return (
     <Context.Provider
       value={{
-        useAppDispach: () => ({
+        useAppDispatch: () => ({
           setThemeMode,
         }),
         useThemeMode: () => useSelector(context, (state: AppStore) => state.themeMode),
