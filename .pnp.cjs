@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@types/prop-types", "npm:15.7.13"],\
           ["@types/react", "npm:18.3.10"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["dayjs", "npm:1.11.13"],\
           ["gatsby", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.13.7"],\
           ["gatsby-plugin-google-gtag", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.13.1"],\
           ["gatsby-plugin-image", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.13.1"],\
@@ -8977,6 +8978,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["date-fns", "npm:2.30.0"],\
           ["@babel/runtime", "npm:7.23.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["dayjs", [\
+      ["npm:1.11.13", {\
+        "packageLocation": "../../../.yarn/berry/cache/dayjs-npm-1.11.13-d478bb9479-10c0.zip/node_modules/dayjs/",\
+        "packageDependencies": [\
+          ["dayjs", "npm:1.11.13"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21948,6 +21958,7 @@ const RAW_RUNTIME_STATE =
           ["@types/prop-types", "npm:15.7.13"],\
           ["@types/react", "npm:18.3.10"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["dayjs", "npm:1.11.13"],\
           ["gatsby", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.13.7"],\
           ["gatsby-plugin-google-gtag", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.13.1"],\
           ["gatsby-plugin-image", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.13.1"],\
