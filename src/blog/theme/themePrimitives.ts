@@ -220,6 +220,7 @@ export const getDesignTokens = (mode: PaletteMode) => {
       },
       subtitle2: {
         fontSize: defaultTheme.typography.pxToRem(14),
+        color: gray[400],
         fontWeight: 500,
       },
       body1: {

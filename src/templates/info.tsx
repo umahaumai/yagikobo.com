@@ -1,5 +1,5 @@
 import { MdxWrapper } from '@/blog/components/MdxProider';
-import content from '@/contents/info/2024-10-05_test.mdx';
+import content from '@/contents/info/2024-10-05_hp-open.mdx';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as React from 'react';
 

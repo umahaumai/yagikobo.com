@@ -11,8 +11,8 @@ import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import { alpha, styled } from '@mui/material/styles';
-import { navigate } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql, navigate, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 import ToggleColorMode from './ToggleColorMode';
 
@@ -48,6 +48,21 @@ export default function AppAppBar() {
     setOpen(false);
   };
 
+  const data = useStaticQuery(graphql`
+    query appBarQuery {
+      logo_dark: file(relativePath: { eq: "logo-dark.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 40)
+        }
+      }
+      logo_light: file(relativePath: { eq: "logo-light.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 40)
+        }
+      }
+    }
+  `);
+
   return (
     <AppBar
       position="fixed"
@@ -61,11 +76,14 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            {mode === 'dark' ? (
-              <StaticImage src="./images/logo-dark.png" alt="logo" width={40} height={40} />
-            ) : (
-              <StaticImage src="./images/logo-light.png" alt="logo" width={40} height={40} />
-            )}
+            <GatsbyImage
+              image={
+                mode === 'dark'
+                  ? data.logo_dark.childImageSharp.gatsbyImageData
+                  : data.logo_light.childImageSharp.gatsbyImageData
+              }
+              alt="logo"
+            />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/')}>
                 トップ

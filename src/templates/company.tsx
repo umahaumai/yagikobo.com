@@ -1,16 +1,5 @@
 import Latest from '@/blog/components/Latest';
-import {
-  Box,
-  Divider,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Box, Divider, Paper, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from '@mui/material';
 import * as React from 'react';
 
 const rows = [
