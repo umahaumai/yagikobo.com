@@ -16,11 +16,15 @@
   "[typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "cSpell.words": [
     "biome",
     "contexts",
     "correctness",
-    "couldn’t",
+    "couldn't",
     "creating",
     "determine",
     "Divider",
@@ -44,5 +48,8 @@
     "Theme",
     "there",
     "Typography"
-  ]
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
