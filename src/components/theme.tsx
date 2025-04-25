@@ -3,7 +3,6 @@ import { useApp } from '@/contexts/siteContext';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import { type PaletteMode, ThemeProvider, createTheme } from '@mui/material/styles';
-// biome-ignore lint/style/useImportType: <explanation>
 import * as React from 'react';
 
 interface TemplateFrameProps {

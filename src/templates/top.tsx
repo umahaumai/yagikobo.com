@@ -1,5 +1,3 @@
-import Latest from '@/blog/components/Latest';
-import MainContent from '@/blog/components/MainContent';
 import { MailOutlineRounded } from '@mui/icons-material';
 import {
   Avatar,
@@ -13,7 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 import dayjs from 'dayjs';
-import { graphql, useStaticQuery } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
@@ -22,7 +20,7 @@ export default function Top() {
     query topQuery {
       logo: file(relativePath: {eq: "yagikobo.png"}) {
         childImageSharp {
-          gatsbyImageData(layout: FIXED, width: 800)
+          gatsbyImageData(layout: FULL_WIDTH, width: 800)
         }
       }
       news: allMdx(
@@ -77,7 +75,7 @@ export default function Top() {
 
         <List>
           {data.news.nodes.map((node) => (
-            <ListItemButton key={node.id}>
+            <ListItemButton key={node.id} component={Link} to={`/info/${node.frontmatter?.slug}`}>
               <ListItemAvatar>
                 {node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData?.images?.fallback?.src ? (
                   <Avatar
@@ -94,13 +92,13 @@ export default function Top() {
                 <ListItemText
                   primary={node.frontmatter?.title}
                   secondary={dayjs(node.frontmatter?.updatedAt).format('YYYY.MM.DD')}
+                  primaryTypographyProps={{ variant: 'subtitle1' }}
                 />
               </ListItem>
             </ListItemButton>
           ))}
         </List>
       </Paper>
-      <Latest />
     </>
   );
 }
