@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "rules": {
+    "typescript": {
+      "formatter": "biome",
+      "linter": "biome"
+    },
+    "javascript": {
+      "formatter": "biome",
+      "linter": "biome"
+    },
+    "typescriptreact": {
+      "formatter": "biome",
+      "linter": "biome"
+    },
+    "javascriptreact": {
+      "formatter": "biome",
+      "linter": "biome"
+    },
+    "markdown": {
+      "formatter": "prettier",
+      "linter": "eslint"
+    },
+    "mdx": {
+      "formatter": "prettier",
+      "linter": "eslint"
+    }
+  }
+}
