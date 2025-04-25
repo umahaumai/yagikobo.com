@@ -50,6 +50,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-remark-images", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.14.0"],\
           ["gatsby-source-filesystem", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
+          ["prettier", "npm:3.5.3"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:18.3.1"],\
@@ -18918,6 +18919,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["prettier", [\
+      ["npm:3.5.3", {\
+        "packageLocation": "./.yarn/unplugged/prettier-npm-3.5.3-787132ce04/node_modules/prettier/",\
+        "packageDependencies": [\
+          ["prettier", "npm:3.5.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["pretty-bytes", [\
       ["npm:5.6.0", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/pretty-bytes-npm-5.6.0-0061079c9f-10c0.zip/node_modules/pretty-bytes/",\
@@ -23166,6 +23176,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-remark-images", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.14.0"],\
           ["gatsby-source-filesystem", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-transformer-sharp", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
+          ["prettier", "npm:3.5.3"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:18.3.1"],\

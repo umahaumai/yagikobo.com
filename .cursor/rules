@@ -18,12 +18,10 @@
       "linter": "biome"
     },
     "markdown": {
-      "formatter": "prettier",
-      "linter": "eslint"
+      "formatter": "prettier"
     },
     "mdx": {
-      "formatter": "prettier",
-      "linter": "eslint"
+      "formatter": "prettier"
     }
   }
 }
