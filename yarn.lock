@@ -2646,15 +2646,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdx-js/react@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "@mdx-js/react@npm:2.3.0"
+"@mdx-js/react@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@mdx-js/react@npm:3.1.0"
   dependencies:
     "@types/mdx": "npm:^2.0.0"
-    "@types/react": "npm:>=16"
   peerDependencies:
+    "@types/react": ">=16"
     react: ">=16"
-  checksum: 10c0/6d647115703dbe258f7fe372499fa8c6fe17a053ff0f2a208111c9973a71ae738a0ed376770445d39194d217e00e1a015644b24f32c2f7cb4f57988de0649b15
+  checksum: 10c0/381ed1211ba2b8491bf0ad9ef0d8d1badcdd114e1931d55d44019d4b827cc2752586708f9c7d2f9c3244150ed81f1f671a6ca95fae0edd5797fb47a22e06ceca
   languageName: node
   linkType: hard
 
@@ -4149,15 +4149,6 @@ __metadata:
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10c0/80145b707b780d682092b51d520f58a0171c4067ff36cf488d3346d92b715b27fd334acd0fabb8eb21a4eb6c4061f1535e8bfa6642a7f4025e63ebec868fb6d1
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:>=16":
-  version: 19.1.2
-  resolution: "@types/react@npm:19.1.2"
-  dependencies:
-    csstype: "npm:^3.0.2"
-  checksum: 10c0/76ffe71395c713d4adc3c759465012d3c956db00af35ab7c6d0d91bd07b274b7ce69caa0478c0760311587bd1e38c78ffc9688ebc629f2b266682a19d8750947
   languageName: node
   linkType: hard
 
@@ -18492,7 +18483,7 @@ __metadata:
     "@biomejs/biome": "npm:^1.9.4"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.0"
-    "@mdx-js/react": "npm:^2.3.0"
+    "@mdx-js/react": "npm:^3.1.0"
     "@mui/icons-material": "npm:^7.0.2"
     "@mui/material": "npm:^7.0.2"
     "@types/node": "npm:^22.15.2"
