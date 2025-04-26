@@ -32,7 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@biomejs/biome", "npm:1.9.4"],\
           ["@emotion/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:11.14.0"],\
           ["@emotion/styled", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:11.14.0"],\
-          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:2.3.0"],\
+          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.1.0"],\
           ["@mui/icons-material", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.0.2"],\
           ["@mui/material", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.0.2"],\
           ["@types/node", "npm:22.15.2"],\
@@ -4252,17 +4252,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@mdx-js/react", [\
-      ["npm:2.3.0", {\
-        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@mdx-js-react-npm-2.3.0-d5582a450b-10c0.zip/node_modules/@mdx-js/react/",\
+      ["npm:3.1.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@mdx-js-react-npm-3.1.0-a91217d996-10c0.zip/node_modules/@mdx-js/react/",\
         "packageDependencies": [\
-          ["@mdx-js/react", "npm:2.3.0"]\
+          ["@mdx-js/react", "npm:3.1.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:2.3.0", {\
-        "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-c2ee3eb248/6/Users/yasushikobayashi/.yarn/berry/cache/@mdx-js-react-npm-2.3.0-d5582a450b-10c0.zip/node_modules/@mdx-js/react/",\
+      ["virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/@mdx-js-react-virtual-6d814710ec/6/Users/yasushikobayashi/.yarn/berry/cache/@mdx-js-react-npm-3.1.0-a91217d996-10c0.zip/node_modules/@mdx-js/react/",\
         "packageDependencies": [\
-          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:2.3.0"],\
+          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.1.0"],\
           ["@types/mdx", "npm:2.0.11"],\
           ["@types/react", "npm:18.3.20"],\
           ["react", "npm:18.3.1"]\
@@ -12385,7 +12385,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/gatsby-plugin-mdx-virtual-10f7cbba4b/6/Users/yasushikobayashi/.yarn/berry/cache/gatsby-plugin-mdx-npm-5.14.1-a573d4cc75-10c0.zip/node_modules/gatsby-plugin-mdx/",\
         "packageDependencies": [\
           ["@mdx-js/mdx", "npm:2.3.0"],\
-          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:2.3.0"],\
+          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.1.0"],\
           ["@types/gatsby", null],\
           ["@types/gatsby-source-filesystem", null],\
           ["@types/mdx-js__react", null],\
@@ -23158,7 +23158,7 @@ const RAW_RUNTIME_STATE =
           ["@biomejs/biome", "npm:1.9.4"],\
           ["@emotion/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:11.14.0"],\
           ["@emotion/styled", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:11.14.0"],\
-          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:2.3.0"],\
+          ["@mdx-js/react", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.1.0"],\
           ["@mui/icons-material", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.0.2"],\
           ["@mui/material", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.0.2"],\
           ["@types/node", "npm:22.15.2"],\
