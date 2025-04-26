@@ -30,16 +30,11 @@ export default function Top() {
       {
         nodes {
           id
-          internal {
-            contentFilePath
-            content
-            contentDigest
-            type
-          }
           tableOfContents
           frontmatter {
             slug
             title
+            category
             cteatedAt
             updatedAt
             thumbnail {
@@ -47,14 +42,6 @@ export default function Top() {
               childImageSharp {
                 gatsbyImageData(layout: FIXED, width: 120)
               }
-            }
-          }
-          fields {
-            timeToRead {
-              text
-              time
-              words
-              minutes
             }
           }
         }
@@ -75,7 +62,11 @@ export default function Top() {
 
         <List>
           {data.news.nodes.map((node) => (
-            <ListItemButton key={node.id} component={Link} to={`/info/${node.frontmatter?.slug}`}>
+            <ListItemButton
+              key={node.id}
+              component={Link}
+              to={`/${node.frontmatter?.category}/${node.frontmatter?.slug}`}
+            >
               <ListItemAvatar>
                 {node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData?.images?.fallback?.src ? (
                   <Avatar
@@ -92,7 +83,11 @@ export default function Top() {
                 <ListItemText
                   primary={node.frontmatter?.title}
                   secondary={dayjs(node.frontmatter?.updatedAt).format('YYYY.MM.DD')}
-                  primaryTypographyProps={{ variant: 'subtitle1' }}
+                  slotProps={{
+                    primary: {
+                      variant: 'subtitle1',
+                    },
+                  }}
                 />
               </ListItem>
             </ListItemButton>

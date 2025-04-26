@@ -1,11 +1,13 @@
 ---
 title: Blog sample
-slug: /blog-1
+slug: blog-1
+category: blog
 ---
 
 # マークダウンのサンプルです
 
 リストの例
+
 - １つ目のアイテム
 - ２つ目のアイテム
 - ３つ目のアイテム
@@ -15,13 +17,14 @@ slug: /blog-1
 
 テーブルの例
 
-|ラベルA|ラベルB|
-|:---|:---|
-|AAA1|BBB1|
-|AAA2|BBB2|
-|AAA3|BBB3|
+| ラベルA | ラベルB |
+| :------ | :------ |
+| AAA1    | BBB1    |
+| AAA2    | BBB2    |
+| AAA3    | BBB3    |
 
 引用の例
+
 > 引用テキスト
 
 ソースコードの例

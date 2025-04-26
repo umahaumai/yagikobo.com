@@ -4,7 +4,7 @@ import { Divider, Link, Typography } from '@mui/material';
 import React from 'react';
 
 const components = {
-  h1: (props: Readonly<Props>) => <Typography variant="h1" sx={{ bgcolor: 'red' }} {...props} />,
+  h1: (props: Readonly<Props>) => <Typography variant="h1" {...props} />,
   h2: (props: Readonly<Props>) => <Typography variant="h2" {...props} />,
   h3: (props: Readonly<Props>) => <Typography variant="h3" {...props} />,
   h4: (props: Readonly<Props>) => <Typography variant="h4" {...props} />,
