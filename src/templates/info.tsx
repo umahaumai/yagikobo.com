@@ -1,5 +1,6 @@
+import HtmlAst from '@/components/HtmlAst';
+import { parseHtmlAst } from '@/components/HtmlAst/parseHtmlAst';
 import SubHeader from '@/components/SubHeader';
-import { MailOutlineRounded } from '@mui/icons-material';
 import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
 import dayjs from 'dayjs';
 import { Link, graphql, useStaticQuery } from 'gatsby';
@@ -28,20 +29,19 @@ export default function Info() {
               }
             }
           }
+          excerpt(pruneLength: 200)
           body
         }
       }
     }
   `);
 
-  console.log(data.allMdx.nodes);
-
   return (
     <Box>
       <SubHeader title="お知らせ" />
       <Box>
         {data.allMdx.nodes.map((node: Queries.infoQueryQuery['allMdx']['nodes'][0]) => (
-          <Card key={node.id}>
+          <Card key={node.id} component="article">
             {node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData && (
               <CardHeader
                 avatar={
@@ -50,11 +50,28 @@ export default function Info() {
                     alt={node.frontmatter?.title || ''}
                   />
                 }
-                title={node.frontmatter?.title}
+                title={<Typography variant="h3">{node.frontmatter?.title}</Typography>}
               />
             )}
-            <CardContent>
-              <Typography>{node.body}</Typography>
+            <CardContent
+              component={Link}
+              to={`/info/${node.frontmatter?.slug}`}
+              sx={{
+                textDecoration: 'none',
+                color: 'inherit',
+                mt: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 1,
+                p: 1,
+              }}
+            >
+              <Typography>
+                {node.body ? HtmlAst(parseHtmlAst(node.body) as unknown as Record<string, unknown>) : ''}
+              </Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'end' }}>
+                <Typography>更新日: {dayjs(node.frontmatter?.updatedAt).format('YYYY/MM/DD')}</Typography>
+              </Box>
             </CardContent>
           </Card>
         ))}

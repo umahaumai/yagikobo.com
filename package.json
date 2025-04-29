@@ -21,6 +21,7 @@
     "@mdx-js/react": "^3.1.0",
     "@mui/icons-material": "^7.0.2",
     "@mui/material": "^7.0.2",
+    "@types/hast": "^3.0.4",
     "dayjs": "^1.11.13",
     "gatsby": "^5.14.3",
     "gatsby-plugin-google-gtag": "^5.14.0",
@@ -34,7 +35,14 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-raw": "^7.0.0",
+    "rehype-react": "^8.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.9",

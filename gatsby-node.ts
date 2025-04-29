@@ -30,11 +30,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
         }
       }
     }`)) as {
-    data?: {
-      allMdx: {
-        nodes: Array<{ id: string; frontmatter?: { title?: string; slug?: string; category?: string }; body: string }>;
-      };
-    };
+    data?: Queries.CreatePagesQueryQuery;
   };
 
   if (!result.data?.allMdx.nodes) {
@@ -54,9 +50,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
       },
     });
   }
-  // path: `/audiobook/${collectionId}/payment`,
-  // component: path.resolve(`./src/components/templates/Audiobook/Payment/index.tsx`),
-  // context,
 };
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = async ({ node, actions }) => {

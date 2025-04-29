@@ -3,7 +3,7 @@ import type { Props } from '@mdx-js/react/lib';
 import { Divider, Link, Typography } from '@mui/material';
 import React from 'react';
 
-const components = {
+export const components = {
   h1: (props: Readonly<Props>) => <Typography variant="h1" {...props} />,
   h2: (props: Readonly<Props>) => <Typography variant="h2" {...props} />,
   h3: (props: Readonly<Props>) => <Typography variant="h3" {...props} />,

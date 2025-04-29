@@ -2,7 +2,7 @@ import getBlogTheme from '@/blog/theme/getBlogTheme';
 import { useApp } from '@/contexts/siteContext';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import { type PaletteMode, ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import * as React from 'react';
 
 interface TemplateFrameProps {
