@@ -1,4 +1,3 @@
-import { tableCellClasses } from '@mui/material';
 import { type PaletteMode, type Shadows, alpha, createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/Paper' {
@@ -188,35 +187,27 @@ export const getDesignTokens = (mode: PaletteMode) => {
     typography: {
       fontFamily: '"Noto Sans JP", sans-serif, "Inter"',
       h1: {
-        fontSize: defaultTheme.typography.pxToRem(48),
+        fontSize: defaultTheme.typography.pxToRem(24),
         fontWeight: 600,
-        lineHeight: 1.2,
+        lineHeight: 2,
         letterSpacing: -0.5,
       },
       h2: {
-        fontSize: defaultTheme.typography.pxToRem(36),
-        fontWeight: 600,
-        lineHeight: 1.2,
-      },
-      h3: {
-        fontSize: defaultTheme.typography.pxToRem(30),
-        lineHeight: 1.2,
-      },
-      h4: {
-        fontSize: defaultTheme.typography.pxToRem(24),
-        fontWeight: 600,
-        lineHeight: 1.5,
-      },
-      h5: {
         fontSize: defaultTheme.typography.pxToRem(20),
         fontWeight: 600,
+        lineHeight: 2,
       },
-      h6: {
+      h3: {
         fontSize: defaultTheme.typography.pxToRem(18),
+        lineHeight: 2,
+      },
+      h4: {
+        fontSize: defaultTheme.typography.pxToRem(16),
         fontWeight: 600,
+        lineHeight: 2,
       },
       subtitle1: {
-        fontSize: defaultTheme.typography.pxToRem(18),
+        fontSize: defaultTheme.typography.pxToRem(16),
       },
       subtitle2: {
         fontSize: defaultTheme.typography.pxToRem(14),
@@ -224,11 +215,13 @@ export const getDesignTokens = (mode: PaletteMode) => {
         fontWeight: 500,
       },
       body1: {
-        fontSize: defaultTheme.typography.pxToRem(14),
+        fontSize: defaultTheme.typography.pxToRem(16),
+        lineHeight: 2,
       },
       body2: {
         fontSize: defaultTheme.typography.pxToRem(14),
         fontWeight: 400,
+        lineHeight: 1.5,
       },
       caption: {
         fontSize: defaultTheme.typography.pxToRem(12),

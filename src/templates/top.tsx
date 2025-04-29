@@ -20,11 +20,11 @@ export default function Top() {
     query topQuery {
       logo: file(relativePath: {eq: "yagikobo.png"}) {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH, width: 800)
+          gatsbyImageData( width: 400)
         }
       }
       news: allMdx(
-        filter: {frontmatter: {category: {eq: "news"}}},
+        filter: {frontmatter: {category: {eq: "info"}}},
         limit: 5,
         sort: {frontmatter: {updatedAt: DESC}}) 
       {
@@ -49,12 +49,12 @@ export default function Top() {
     }`);
   return (
     <>
-      <Box sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', mt: -15 }} component="h1">
+      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} component="h1">
         {data.logo?.childImageSharp?.gatsbyImageData && (
           <GatsbyImage image={data.logo.childImageSharp.gatsbyImageData} alt="Yagi Kobo.inc" />
         )}
       </Box>
-      <Paper sx={{ p: 2, mt: 6 }}>
+      <Paper sx={{ p: 2 }}>
         <Typography variant="subtitle2">NEWS</Typography>
         <Typography variant="h2" sx={{ mb: 1 }}>
           ニュース

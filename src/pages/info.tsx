@@ -4,4 +4,4 @@ import * as React from 'react';
 
 export default template;
 
-export const Head: HeadFC = () => <title>やぎ工房: お知らせ</title>;
+export const Head: HeadFC = () => <title>お知らせ - 株式会社やぎ工房</title>;

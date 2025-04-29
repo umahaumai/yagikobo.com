@@ -24,7 +24,7 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage = (props: PageProps) => {
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>お探しのページが見つかりません。</h1>
@@ -33,7 +33,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
         {process.env.NODE_ENV === 'development' ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            Try creating a page in <code style={codeStyles}>{props.path}</code>.
             <br />
           </>
         ) : null}

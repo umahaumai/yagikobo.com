@@ -42,7 +42,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
   }
 
   for (const node of result.data.allMdx.nodes) {
-    console.log(node);
     const category = node.frontmatter?.category || 'blog';
     if (!category) {
       continue;

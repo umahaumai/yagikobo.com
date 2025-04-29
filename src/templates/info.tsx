@@ -1,32 +1,64 @@
-import { MdxWrapper } from '@/blog/components/MdxProider';
-import content from '@/contents/info/2024-10-05_hp-open.mdx';
-import { graphql, useStaticQuery } from 'gatsby';
+import SubHeader from '@/components/SubHeader';
+import { MailOutlineRounded } from '@mui/icons-material';
+import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
+import dayjs from 'dayjs';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
 export default function Info() {
   const data = useStaticQuery(graphql`
-    query infoTestQuery {
-      mdx(id: { eq: "434d21d3-62ef-5135-87bf-e2d0be7ceb39" }) {
-        frontmatter {
-          title
+    query infoQuery {
+      allMdx(
+        filter: { frontmatter: { category: { eq: "info" } } }
+        sort: { frontmatter: { updatedAt: DESC } }
+      ) {
+        nodes {
+          id
+          frontmatter {
+            slug
+            title
+            category
+            createdAt
+            updatedAt
+            thumbnail {
+              id
+              childImageSharp {
+                gatsbyImageData(layout: FIXED, width: 120)
+              }
+            }
+          }
+          body
         }
-        internal {
-          contentFilePath
-        }
-        body
       }
-    }`);
-  console.log(data);
-  console.log(content());
+    }
+  `);
 
-  return <MdxWrapper>{content()}</MdxWrapper>;
+  console.log(data.allMdx.nodes);
+
+  return (
+    <Box>
+      <SubHeader title="お知らせ" />
+      <Box>
+        {data.allMdx.nodes.map((node: Queries.infoQueryQuery['allMdx']['nodes'][0]) => (
+          <Card key={node.id}>
+            {node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData && (
+              <CardHeader
+                avatar={
+                  <GatsbyImage
+                    image={node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData}
+                    alt={node.frontmatter?.title || ''}
+                  />
+                }
+                title={node.frontmatter?.title}
+              />
+            )}
+            <CardContent>
+              <Typography>{node.body}</Typography>
+            </CardContent>
+          </Card>
+        ))}
+      </Box>
+    </Box>
+  );
 }
-
-// export const query = graphql`
-//   infoTestQuery($id: String!) {
-//     mdx(id: { eq: $id }) {
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }`;
