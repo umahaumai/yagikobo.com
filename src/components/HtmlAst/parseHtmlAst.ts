@@ -14,7 +14,7 @@ export const parseHtmlAst = (text: string): Root => {
   return unified()
     .use(rehypeHighlight)
     .use(remarkToRehype, { allowDangerousHtml: true })
-    .use(rehypeRaw as Plugin)
+    .use(rehypeRaw as unknown as Plugin)
     .use(rehypeStringify as unknown as Plugin)
     .runSync(node) as unknown as Root;
 };

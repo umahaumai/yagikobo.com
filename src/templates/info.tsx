@@ -1,4 +1,5 @@
-import HtmlAst from '@/components/HtmlAst';
+import Md from '@/components/HtmlAst';
+import HtmlAst from '@/components/HtmlAst/HtmlAst';
 import { parseHtmlAst } from '@/components/HtmlAst/parseHtmlAst';
 import SubHeader from '@/components/SubHeader';
 import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
@@ -66,8 +67,17 @@ export default function Info() {
                 p: 1,
               }}
             >
-              <Typography>
-                {node.body ? HtmlAst(parseHtmlAst(node.body) as unknown as Record<string, unknown>) : ''}
+              <Typography
+                sx={{
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                  maxHeight: '400px',
+                  maskImage: 'linear-gradient(to bottom, black calc(100% - 100px), transparent 100%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, black calc(100% - 100px), transparent 100%)',
+                }}
+              >
+                <Md body={node.body} />
               </Typography>
               <Box sx={{ display: 'flex', justifyContent: 'end' }}>
                 <Typography>更新日: {dayjs(node.frontmatter?.updatedAt).format('YYYY/MM/DD')}</Typography>
