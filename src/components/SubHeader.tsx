@@ -30,7 +30,7 @@ const SubHeader = ({ title }: SubHeaderProps) => {
         </Box>
       )}
       {title && (
-        <Typography variant="h1" sx={{ my: 1 }}>
+        <Typography variant="h1" component="p" sx={{ my: 1 }}>
           {title}
         </Typography>
       )}

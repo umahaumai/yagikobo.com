@@ -1,4 +1,4 @@
-import template from '@/templates/info';
+import template from '@/templates/product';
 import type { HeadFC } from 'gatsby';
 import * as React from 'react';
 

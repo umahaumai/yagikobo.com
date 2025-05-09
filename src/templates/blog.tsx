@@ -6,11 +6,11 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import * as React from 'react';
 
-export default function Info() {
+export default function Blog() {
   const data = useStaticQuery(graphql`
-    query infoQuery {
+    query blogQuery {
       allMdx(
-        filter: { frontmatter: { category: { eq: "info" }, open: { eq: true } } }
+        filter: { frontmatter: { category: { eq: "blog" }, open: { eq: true } } }
         sort: { frontmatter: { updatedAt: DESC } }
       ) {
         nodes {
@@ -37,9 +37,9 @@ export default function Info() {
 
   return (
     <Box>
-      <SubHeader title="お知らせ" />
+      <SubHeader title="代表ブログ" />
       <Box>
-        {data.allMdx.nodes.map((node: Queries.infoQueryQuery['allMdx']['nodes'][0]) => (
+        {data.allMdx.nodes.map((node: Queries.blogQueryQuery['allMdx']['nodes'][0]) => (
           <Card key={node.id} component="article" sx={{ mb: 4 }}>
             {node.frontmatter?.thumbnail?.childImageSharp?.gatsbyImageData && (
               <CardHeader
@@ -54,7 +54,7 @@ export default function Info() {
             )}
             <CardContent
               component={Link}
-              to={`/info/${node.frontmatter?.slug}`}
+              to={`/blog/${node.frontmatter?.slug}`}
               sx={{
                 textDecoration: 'none',
                 color: 'inherit',

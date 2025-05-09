@@ -1,4 +1,4 @@
-import { MdxWrapper } from '@/blog/components/MdxProider';
+import { MdxWrapper } from '@/components/HtmlAst/MdxProider';
 import SubHeader from '@/components/SubHeader';
 import { Box } from '@mui/material';
 import type { PageProps } from 'gatsby';

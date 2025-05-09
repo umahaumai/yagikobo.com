@@ -24,7 +24,7 @@ export default function Top() {
         }
       }
       news: allMdx(
-        filter: {frontmatter: {category: {eq: "info"}}},
+        filter: {frontmatter: {category: {eq: "info"}, open: {eq: true}}},
         limit: 5,
         sort: {frontmatter: {updatedAt: DESC}}) 
       {

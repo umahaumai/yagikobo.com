@@ -85,19 +85,19 @@ export default function AppAppBar() {
               alt="logo"
             />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/')}>
+              <Button variant="text" color="info" size="small" href="/">
                 トップ
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/company/')}>
+              <Button variant="text" color="info" size="small" href="/company/">
                 会社情報
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/info/')}>
+              <Button variant="text" color="info" size="small" href="/info/">
                 ニュース
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/product/')}>
+              <Button variant="text" color="info" size="small" href="/product/">
                 製品・サービス
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => handleMenuClick('/blog/')}>
+              <Button variant="text" color="info" size="small" href="/blog/">
                 代表ブログ
               </Button>
               <Button variant="text" color="info" size="small">

@@ -1,13 +1,17 @@
-import HtmlAst from './HtmlAst';
+import htmlAst from './htmlAst';
 import { parseHtmlAst } from './parseHtmlAst';
 
-const Md = ({ body }: { body?: string | null }) => {
+interface MdProps {
+  body?: string | null;
+  variant?: 'list' | 'normal';
+}
+
+const Md = ({ body, variant = 'normal' }: MdProps) => {
   if (!body) {
     return null;
   }
-  // HtmlAst(parseHtmlAst(node.body))
   const ast = parseHtmlAst(body) as unknown as Record<string, unknown>;
-  return HtmlAst(ast);
+  return htmlAst(ast, variant);
 };
 
 export default Md;
