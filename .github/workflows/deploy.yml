@@ -22,14 +22,13 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Setup Yarn
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'yarn'
-
       - name: Enable Corepack
         run: corepack enable
+
+      - name: Setup Yarn
+        run: |
+          yarn set version stable
+          yarn --version
 
       - name: Install dependencies
         run: yarn install
