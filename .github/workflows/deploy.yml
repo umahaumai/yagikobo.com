@@ -5,14 +5,10 @@ on:
     branches:
       - main  # メインブランチへのプッシュ時に実行
 
-env:
-  GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-  GCP_BUCKET_NAME: ${{ secrets.GCP_BUCKET_NAME }}
-  GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: Build Enviroments  # 環境名を指定
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,15 +34,30 @@ jobs:
         env:
           GATSBY_ACTIVE_ENV: production
 
+      - name: Check GCP Secrets
+        run: |
+          if [ -z "${{ secrets.GCP_SA_KEY }}" ]; then
+            echo "::error::GCP_SA_KEY secret is not set in repository secrets"
+            exit 1
+          fi
+          if [ -z "${{ secrets.GCP_PROJECT_ID }}" ]; then
+            echo "::error::GCP_PROJECT_ID secret is not set in repository secrets"
+            exit 1
+          fi
+          if [ -z "${{ secrets.GCP_BUCKET_NAME }}" ]; then
+            echo "::error::GCP_BUCKET_NAME secret is not set in repository secrets"
+            exit 1
+          fi
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ env.GCP_SA_KEY }}
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Deploy to Cloud Storage
         run: |
-          gsutil -m rsync -d -r public/ gs://${{ env.GCP_BUCKET_NAME }}/
-          gsutil iam ch allUsers:objectViewer gs://${{ env.GCP_BUCKET_NAME }} 
+          gsutil -m rsync -d -r public/ gs://${{ secrets.GCP_BUCKET_NAME }}/
+          gsutil iam ch allUsers:objectViewer gs://${{ secrets.GCP_BUCKET_NAME }} 
