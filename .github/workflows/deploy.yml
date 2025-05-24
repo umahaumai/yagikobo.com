@@ -58,6 +58,4 @@ jobs:
         uses: google-github-actions/setup-gcloud@v2
 
       - name: Deploy to Cloud Storage
-        run: |
-          gsutil -m rsync -d -r public/ gs://${{ secrets.GCP_BUCKET_NAME }}/
-          gsutil iam ch allUsers:objectViewer gs://${{ secrets.GCP_BUCKET_NAME }} 
+        run: gsutil -m rsync -d -r public/ gs://${{ secrets.GCP_BUCKET_NAME }}/ 
