@@ -10,7 +10,7 @@ interface SubHeaderProps {
 const SubHeader = ({ title }: SubHeaderProps) => {
   const data = useStaticQuery(graphql`
     query {
-      logo: file(relativePath: {eq: "yagikobo.png"}) {
+      logo: file(relativePath: {eq: "logo.png"}) {
         childImageSharp {
           gatsbyImageData( width: 400)
         }
@@ -25,8 +25,19 @@ const SubHeader = ({ title }: SubHeaderProps) => {
           <GatsbyImage
             style={{ width: 200, height: 200 }}
             image={data.logo.childImageSharp.gatsbyImageData}
-            alt="Yagi Kobo.inc"
+            alt="Yagikobo.inc"
           />
+          <Typography
+            variant="h2"
+            sx={{
+              fontWeight: 'bold',
+              letterSpacing: '0.15em',
+              my: 2,
+              textAlign: 'center',
+            }}
+          >
+            Yagikobo.inc
+          </Typography>
         </Box>
       )}
       {title && (

@@ -50,12 +50,7 @@ export default function AppAppBar() {
 
   const data = useStaticQuery(graphql`
     query appBarQuery {
-      logo_dark: file(relativePath: { eq: "logo-dark.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 40)
-        }
-      }
-      logo_light: file(relativePath: { eq: "logo-light.png" }) {
+      logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           gatsbyImageData(width: 40)
         }
@@ -76,14 +71,7 @@ export default function AppAppBar() {
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
-            <GatsbyImage
-              image={
-                mode === 'dark'
-                  ? data.logo_dark.childImageSharp.gatsbyImageData
-                  : data.logo_light.childImageSharp.gatsbyImageData
-              }
-              alt="logo"
-            />
+            <GatsbyImage image={data.logo.childImageSharp.gatsbyImageData} alt="logo" />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Button variant="text" color="info" size="small" href="/">
                 トップ

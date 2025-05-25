@@ -18,7 +18,7 @@ import * as React from 'react';
 export default function Top() {
   const data: Queries.topQueryQuery = useStaticQuery(graphql`
     query topQuery {
-      logo: file(relativePath: {eq: "yagikobo.png"}) {
+      logo: file(relativePath: {eq: "logo.png"}) {
         childImageSharp {
           gatsbyImageData( width: 400)
         }
@@ -49,10 +49,16 @@ export default function Top() {
     }`);
   return (
     <>
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} component="h1">
+      <Box
+        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}
+        component="h1"
+      >
         {data.logo?.childImageSharp?.gatsbyImageData && (
-          <GatsbyImage image={data.logo.childImageSharp.gatsbyImageData} alt="Yagi Kobo.inc" />
+          <GatsbyImage image={data.logo.childImageSharp.gatsbyImageData} alt="Yagikobo.inc" />
         )}
+        <Typography sx={{ fontSize: '3rem', fontWeight: 'bold', letterSpacing: '0.15em', my: 2 }}>
+          Yagikobo.inc
+        </Typography>
       </Box>
       <Paper sx={{ p: 2 }}>
         <Typography variant="subtitle2">NEWS</Typography>
