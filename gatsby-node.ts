@@ -23,6 +23,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
             title
             slug
             category
+            updatedAt
+            createdAt
           }
           internal {
             contentFilePath
