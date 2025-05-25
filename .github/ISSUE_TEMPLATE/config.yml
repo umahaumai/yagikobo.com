@@ -1,0 +1,17 @@
+name: Issue テンプレート
+description: 適切なテンプレートを選択してください
+title: 'Issue: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ありがとうございます。適切なテンプレートを選択してください。
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: Issueの種類
+      options:
+        - バグ報告
+        - 機能要望
+    validations:
+      required: true
