@@ -35,7 +35,7 @@ export default function Top() {
             slug
             title
             category
-            cteatedAt
+            createdAt
             updatedAt
             thumbnail {
               id
