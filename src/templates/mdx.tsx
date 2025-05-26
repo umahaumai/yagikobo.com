@@ -1,28 +1,57 @@
-import { MdxWrapper } from '@/components/HtmlAst/MdxProider';
+import Md from '@/components/HtmlAst';
 import SubHeader from '@/components/SubHeader';
 import { Box, Divider, Typography } from '@mui/material';
 import dayjs from 'dayjs';
-import type { PageProps } from 'gatsby';
+import { type PageProps, graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 
-export interface InfoProps extends PageProps<unknown, Queries.CreatePagesQueryQuery['allMdx']['nodes'][0]> {}
+export const query = graphql`
+  query mdxQuery($id: String!) {
+    mdx(id: { eq: $id }) {
+      id
+      frontmatter {
+        slug
+        title
+        category
+        createdAt
+        updatedAt
+        thumbnail { 
+          id
+          childImageSharp {
+            gatsbyImageData(layout: FIXED, width: 120)
+          }
+        }
+      }
+      body
+    }
+  }
+`;
 
-export const Head = ({ pageContext }: InfoProps) => {
-  return <title>{pageContext?.frontmatter?.title} - 株式会社やぎ工房</title>;
+interface MdxProps extends PageProps<Queries.mdxQueryQuery> {}
+
+export const Head = ({
+  data: {
+    mdx: {
+      frontmatter: { title },
+    },
+  },
+}: MdxProps) => {
+  return <title>{title} - 株式会社やぎ工房</title>;
 };
 
-export default function Info({ children, pageContext }: InfoProps) {
+export default function Mdx({ data }: MdxProps) {
   // 画面表示時に頁のトップにスクロールする
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <Box>
       <SubHeader />
-      <MdxWrapper>{children}</MdxWrapper>
+      <Md body={data.mdx?.body} />
       <Divider sx={{ my: 2 }} />
       <Typography variant="body2" sx={{ textAlign: 'right' }}>
-        更新日: {dayjs(pageContext.frontmatter?.updatedAt).format('YYYY-MM-DD')}
+        更新日: {dayjs(data.mdx?.frontmatter?.updatedAt).format('YYYY-MM-DD')}
       </Typography>
     </Box>
   );

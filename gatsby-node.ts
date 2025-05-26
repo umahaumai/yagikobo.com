@@ -44,9 +44,10 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
     if (!category) {
       continue;
     }
+
     createPage({
       path: `/${category}/${node.frontmatter?.slug}`,
-      component: path.resolve(`./src/templates/mdx.tsx?__contentFilePath=${node.internal?.contentFilePath}`),
+      component: path.resolve(`./src/templates/mdx.tsx`),
       context: {
         ...node,
       },
