@@ -46,6 +46,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-image", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.14.0"],\
           ["gatsby-plugin-manifest", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-plugin-mdx", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.1"],\
+          ["gatsby-plugin-robots-txt", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:1.8.0"],\
           ["gatsby-plugin-sharp", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-remark-images", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.14.0"],\
           ["gatsby-source-filesystem", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
@@ -3007,6 +3008,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@babel-runtime-npm-7.27.1-c9b375440e-10c0.zip/node_modules/@babel/runtime/",\
         "packageDependencies": [\
           ["@babel/runtime", "npm:7.27.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.28.3", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@babel-runtime-npm-7.28.3-216c877217-10c0.zip/node_modules/@babel/runtime/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.28.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6043,6 +6051,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/minimist", [\
+      ["npm:1.2.5", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@types-minimist-npm-1.2.5-c85664a9d8-10c0.zip/node_modules/@types/minimist/",\
+        "packageDependencies": [\
+          ["@types/minimist", "npm:1.2.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/mkdirp", [\
       ["npm:0.5.2", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@types-mkdirp-npm-0.5.2-8180a91a82-10c0.zip/node_modules/@types/mkdirp/",\
@@ -6083,6 +6100,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@types-node-npm-8.10.66-b849acaf16-10c0.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:8.10.66"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/normalize-package-data", [\
+      ["npm:2.4.4", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/@types-normalize-package-data-npm-2.4.4-676a8ba353-10c0.zip/node_modules/@types/normalize-package-data/",\
+        "packageDependencies": [\
+          ["@types/normalize-package-data", "npm:2.4.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -7226,6 +7252,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["arrify", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/arrify-npm-1.0.1-affafba9fe-10c0.zip/node_modules/arrify/",\
+        "packageDependencies": [\
+          ["arrify", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.0.1", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/arrify-npm-2.0.1-38c408f77c-10c0.zip/node_modules/arrify/",\
         "packageDependencies": [\
@@ -8213,6 +8246,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/camelcase-npm-6.3.0-e5e42a0d15-10c0.zip/node_modules/camelcase/",\
         "packageDependencies": [\
           ["camelcase", "npm:6.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["camelcase-keys", [\
+      ["npm:6.2.2", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/camelcase-keys-npm-6.2.2-d13777ec12-10c0.zip/node_modules/camelcase-keys/",\
+        "packageDependencies": [\
+          ["camelcase", "npm:5.3.1"],\
+          ["camelcase-keys", "npm:6.2.2"],\
+          ["map-obj", "npm:4.3.0"],\
+          ["quick-lru", "npm:4.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9491,6 +9536,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/decamelize-npm-1.2.0-c5a2fdc622-10c0.zip/node_modules/decamelize/",\
         "packageDependencies": [\
           ["decamelize", "npm:1.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["decamelize-keys", [\
+      ["npm:1.1.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/decamelize-keys-npm-1.1.1-4cfa36ed4b-10c0.zip/node_modules/decamelize-keys/",\
+        "packageDependencies": [\
+          ["decamelize", "npm:1.2.0"],\
+          ["decamelize-keys", "npm:1.1.1"],\
+          ["map-obj", "npm:1.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12485,6 +12541,30 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["gatsby-plugin-robots-txt", [\
+      ["npm:1.8.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/gatsby-plugin-robots-txt-npm-1.8.0-5f10a9345e-10c0.zip/node_modules/gatsby-plugin-robots-txt/",\
+        "packageDependencies": [\
+          ["gatsby-plugin-robots-txt", "npm:1.8.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:1.8.0", {\
+        "packageLocation": "./.yarn/__virtual__/gatsby-plugin-robots-txt-virtual-bebb09547e/6/Users/yasushikobayashi/.yarn/berry/cache/gatsby-plugin-robots-txt-npm-1.8.0-5f10a9345e-10c0.zip/node_modules/gatsby-plugin-robots-txt/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.28.3"],\
+          ["@types/gatsby", null],\
+          ["gatsby", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.3"],\
+          ["gatsby-plugin-robots-txt", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:1.8.0"],\
+          ["generate-robotstxt", "npm:8.0.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/gatsby",\
+          "gatsby"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["gatsby-plugin-sharp", [\
       ["npm:5.14.0", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/gatsby-plugin-sharp-npm-5.14.0-6eb56733e1-10c0.zip/node_modules/gatsby-plugin-sharp/",\
@@ -12791,6 +12871,21 @@ const RAW_RUNTIME_STATE =
           ["fs-extra", "npm:11.3.0"],\
           ["gatsby-worker", "npm:2.14.0"],\
           ["signal-exit", "npm:3.0.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["generate-robotstxt", [\
+      ["npm:8.0.3", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/generate-robotstxt-npm-8.0.3-cf91236923-10c0.zip/node_modules/generate-robotstxt/",\
+        "packageDependencies": [\
+          ["cosmiconfig", "npm:6.0.0"],\
+          ["fs-extra", "npm:9.1.0"],\
+          ["generate-robotstxt", "npm:8.0.3"],\
+          ["ip-regex", "npm:4.3.0"],\
+          ["is-absolute-url", "npm:3.0.3"],\
+          ["meow", "npm:7.1.1"],\
+          ["resolve-from", "npm:5.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13294,6 +13389,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["duplexer", "npm:0.1.2"],\
           ["gzip-size", "npm:6.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["hard-rejection", [\
+      ["npm:2.1.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/hard-rejection-npm-2.1.0-a80f2a977d-10c0.zip/node_modules/hard-rejection/",\
+        "packageDependencies": [\
+          ["hard-rejection", "npm:2.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14105,6 +14209,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ip-regex", [\
+      ["npm:4.3.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/ip-regex-npm-4.3.0-4ac12c6be9-10c0.zip/node_modules/ip-regex/",\
+        "packageDependencies": [\
+          ["ip-regex", "npm:4.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["ipaddr.js", [\
       ["npm:1.9.1", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/ipaddr.js-npm-1.9.1-19ae7878b4-10c0.zip/node_modules/ipaddr.js/",\
@@ -14571,6 +14684,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["is-plain-obj", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/is-plain-obj-npm-1.1.0-1046f64c0b-10c0.zip/node_modules/is-plain-obj/",\
+        "packageDependencies": [\
+          ["is-plain-obj", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.1.0", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/is-plain-obj-npm-2.1.0-8dffd7ae9c-10c0.zip/node_modules/is-plain-obj/",\
         "packageDependencies": [\
@@ -15754,6 +15874,22 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["map-obj", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/map-obj-npm-1.0.1-fa55100fac-10c0.zip/node_modules/map-obj/",\
+        "packageDependencies": [\
+          ["map-obj", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:4.3.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/map-obj-npm-4.3.0-d53e32935d-10c0.zip/node_modules/map-obj/",\
+        "packageDependencies": [\
+          ["map-obj", "npm:4.3.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["markdown-extensions", [\
       ["npm:1.1.1", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/markdown-extensions-npm-1.1.1-633329e3d0-10c0.zip/node_modules/markdown-extensions/",\
@@ -16278,6 +16414,26 @@ const RAW_RUNTIME_STATE =
           ["memoizee", "npm:0.4.15"],\
           ["next-tick", "npm:1.1.0"],\
           ["timers-ext", "npm:0.1.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["meow", [\
+      ["npm:7.1.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/meow-npm-7.1.1-8aa72d593e-10c0.zip/node_modules/meow/",\
+        "packageDependencies": [\
+          ["@types/minimist", "npm:1.2.5"],\
+          ["camelcase-keys", "npm:6.2.2"],\
+          ["decamelize-keys", "npm:1.1.1"],\
+          ["hard-rejection", "npm:2.1.0"],\
+          ["meow", "npm:7.1.1"],\
+          ["minimist-options", "npm:4.1.0"],\
+          ["normalize-package-data", "npm:2.5.0"],\
+          ["read-pkg-up", "npm:7.0.1"],\
+          ["redent", "npm:3.0.0"],\
+          ["trim-newlines", "npm:3.0.1"],\
+          ["type-fest", "npm:0.13.1"],\
+          ["yargs-parser", "npm:18.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17091,6 +17247,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["min-indent", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/min-indent-npm-1.0.1-77031f50e1-10c0.zip/node_modules/min-indent/",\
+        "packageDependencies": [\
+          ["min-indent", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["mini-css-extract-plugin", [\
       ["npm:1.6.2", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/mini-css-extract-plugin-npm-1.6.2-f19d00566e-10c0.zip/node_modules/mini-css-extract-plugin/",\
@@ -17147,6 +17312,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/minimist-npm-1.2.8-d7af7b1dce-10c0.zip/node_modules/minimist/",\
         "packageDependencies": [\
           ["minimist", "npm:1.2.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["minimist-options", [\
+      ["npm:4.1.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/minimist-options-npm-4.1.0-64ca250fc1-10c0.zip/node_modules/minimist-options/",\
+        "packageDependencies": [\
+          ["arrify", "npm:1.0.1"],\
+          ["is-plain-obj", "npm:1.1.0"],\
+          ["kind-of", "npm:6.0.3"],\
+          ["minimist-options", "npm:4.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19674,6 +19851,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["quick-lru", [\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/quick-lru-npm-4.0.1-ef8aa17c9c-10c0.zip/node_modules/quick-lru/",\
+        "packageDependencies": [\
+          ["quick-lru", "npm:4.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:5.1.1", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/quick-lru-npm-5.1.1-e38e0edce3-10c0.zip/node_modules/quick-lru/",\
         "packageDependencies": [\
@@ -19982,6 +20166,17 @@ const RAW_RUNTIME_STATE =
           ["read-pkg", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.2.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/read-pkg-npm-5.2.0-50426bd8dc-10c0.zip/node_modules/read-pkg/",\
+        "packageDependencies": [\
+          ["@types/normalize-package-data", "npm:2.4.4"],\
+          ["normalize-package-data", "npm:2.5.0"],\
+          ["parse-json", "npm:5.2.0"],\
+          ["read-pkg", "npm:5.2.0"],\
+          ["type-fest", "npm:0.6.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["read-pkg-up", [\
@@ -19991,6 +20186,16 @@ const RAW_RUNTIME_STATE =
           ["find-up", "npm:2.1.0"],\
           ["read-pkg", "npm:3.0.0"],\
           ["read-pkg-up", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/read-pkg-up-npm-7.0.1-11895bed9a-10c0.zip/node_modules/read-pkg-up/",\
+        "packageDependencies": [\
+          ["find-up", "npm:4.1.0"],\
+          ["read-pkg", "npm:5.2.0"],\
+          ["read-pkg-up", "npm:7.0.1"],\
+          ["type-fest", "npm:0.8.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20056,6 +20261,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["minimatch", "npm:3.1.2"],\
           ["recursive-readdir", "npm:2.2.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["redent", [\
+      ["npm:3.0.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/redent-npm-3.0.0-31892f4906-10c0.zip/node_modules/redent/",\
+        "packageDependencies": [\
+          ["indent-string", "npm:4.0.0"],\
+          ["redent", "npm:3.0.0"],\
+          ["strip-indent", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21783,6 +21999,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["strip-indent", [\
+      ["npm:3.0.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/strip-indent-npm-3.0.0-519e75a28d-10c0.zip/node_modules/strip-indent/",\
+        "packageDependencies": [\
+          ["min-indent", "npm:1.0.1"],\
+          ["strip-indent", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["strip-json-comments", [\
       ["npm:2.0.1", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/strip-json-comments-npm-2.0.1-e7883b2d04-10c0.zip/node_modules/strip-json-comments/",\
@@ -22348,6 +22574,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["trim-newlines", [\
+      ["npm:3.0.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/trim-newlines-npm-3.0.1-22f1f216de-10c0.zip/node_modules/trim-newlines/",\
+        "packageDependencies": [\
+          ["trim-newlines", "npm:3.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["trim-repeated", [\
       ["npm:1.0.0", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/trim-repeated-npm-1.0.0-1152152315-10c0.zip/node_modules/trim-repeated/",\
@@ -22479,6 +22714,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["type-fest", [\
+      ["npm:0.13.1", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/type-fest-npm-0.13.1-7f4486b973-10c0.zip/node_modules/type-fest/",\
+        "packageDependencies": [\
+          ["type-fest", "npm:0.13.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:0.20.2", {\
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/type-fest-npm-0.20.2-b36432617f-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
@@ -22490,6 +22732,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/type-fest-npm-0.21.3-5ff2a9c6fd-10c0.zip/node_modules/type-fest/",\
         "packageDependencies": [\
           ["type-fest", "npm:0.21.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.6.0", {\
+        "packageLocation": "../../../../../Users/yasushikobayashi/.yarn/berry/cache/type-fest-npm-0.6.0-76b229965b-10c0.zip/node_modules/type-fest/",\
+        "packageDependencies": [\
+          ["type-fest", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -23868,6 +24117,7 @@ const RAW_RUNTIME_STATE =
           ["gatsby-plugin-image", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:3.14.0"],\
           ["gatsby-plugin-manifest", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-plugin-mdx", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.1"],\
+          ["gatsby-plugin-robots-txt", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:1.8.0"],\
           ["gatsby-plugin-sharp", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\
           ["gatsby-remark-images", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:7.14.0"],\
           ["gatsby-source-filesystem", "virtual:0cd8eb1c9e7b9fb3f870f45abb513e6b249ad0474f6b90663eb202562442088dc62a03e31ac000113b7220a15a9489e62a204d3d59438b7b68493f2e64c65e44#npm:5.14.0"],\

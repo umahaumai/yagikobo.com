@@ -23,6 +23,19 @@ const config: GatsbyConfig = {
     // サイトマップを無効化（検索エンジンへの情報提供を停止）
     // 'gatsby-plugin-sitemap',
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: '*',
+            disallow: '/',
+          },
+        ],
+        sitemap: null,
+        host: null,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/logo.png',
