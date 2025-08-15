@@ -20,7 +20,8 @@ const config: GatsbyConfig = {
       },
     },
     'gatsby-plugin-image',
-    'gatsby-plugin-sitemap',
+    // サイトマップを無効化（検索エンジンへの情報提供を停止）
+    // 'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
