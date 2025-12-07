@@ -25,7 +25,7 @@
           {{ end }}
           
           <div class="prose max-w-none mb-4 line-clamp-3">
-            {{ $content := .Content | replaceRE `<h1[^>]*>.*?</h1>` "" }}
+            {{ $content := .Content | replaceRE `<h2[^>]*>.*?</h2>` "" | plainify }}
             {{ $content | truncate 200 }}
           </div>
           

@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  
-  {{ with (resources.Get "css/main.css" | css.TailwindCSS (dict "minify" hugo.IsProduction)) }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{ end }}
+  {{- with (resources.Get "css/main.css" | css.TailwindCSS (dict "minify" hugo.IsProduction)) -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- end -}}
 </head>
 <body class="min-h-screen flex flex-col">
-  {{ partial "header.html" . }}
-  
+  {{- partial "header.html" . -}}
   <main class="flex-grow container mx-auto px-4 py-8">
-    {{ block "main" . }}{{ end }}
+    {{- block "main" . -}}{{- end -}}
   </main>
-  
-  {{ partial "footer.html" . }}
-  
-  {{ partial "analytics.html" . }}
+  {{- partial "footer.html" . -}}
+  {{- partial "analytics.html" . -}}
 </body>
 </html>
 

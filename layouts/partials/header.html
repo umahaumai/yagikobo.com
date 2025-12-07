@@ -1,23 +1,49 @@
-<header class="navbar bg-base-100 shadow-lg mb-8">
-  <div class="flex-1">
-    <a href="/" class="btn btn-ghost normal-case text-xl">
-      <img src="/images/logo.png" alt="Yagikobo.inc" class="w-12 h-12 mr-2" />
-      <span class="font-bold tracking-wider">Yagikobo.inc</span>
-    </a>
+<div class="drawer">
+  <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <header class="navbar bg-base-100 shadow-lg mb-8">
+      <div class="flex-1">
+        <a href="/" class="btn btn-ghost normal-case text-xl">
+          <img src="/images/logo.png" alt="Yagikobo.inc" class="w-12 h-12 mr-2" />
+          <span class="font-bold tracking-wider">Yagikobo.inc</span>
+        </a>
+      </div>
+      <nav class="flex-none">
+        <ul class="menu menu-horizontal px-1 hidden lg:flex">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/info/">お知らせ</a></li>
+          <li><a href="/products/">製品・サービス</a></li>
+          <li><a href="/company/">会社概要</a></li>
+        </ul>
+        <label for="drawer-toggle" class="btn btn-square btn-ghost drawer-button lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </label>
+      </nav>
+    </header>
   </div>
-  <nav class="flex-none">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/">ホーム</a></li>
-      <li><a href="/info/">お知らせ</a></li>
-      <li><a href="/products/">製品・サービス</a></li>
-      <li><a href="/company/">会社概要</a></li>
+  <div class="drawer-side">
+    <label for="drawer-toggle" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-80 min-h-full bg-base-200">
+      <li class="mb-4">
+        <label for="drawer-toggle" class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </label>
+      </li>
+      <li><a href="/" class="text-lg">ホーム</a></li>
+      <li><a href="/info/" class="text-lg">お知らせ</a></li>
+      <li><a href="/products/" class="text-lg">製品・サービス</a></li>
+      <li><a href="/company/" class="text-lg">会社概要</a></li>
     </ul>
-  </nav>
-</header>
+  </div>
+</div>
 
 {{ if .Params.title }}
 <div class="text-center mb-8">
-  <h1 class="text-4xl font-bold mb-4">{{ .Params.title }}</h1>
+  <h1 class="text-4xl font-bold mb-4 mx-4">{{ .Params.title }}</h1>
 </div>
 {{ end }}
 

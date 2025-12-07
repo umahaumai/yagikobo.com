@@ -4,7 +4,9 @@
   "private": true,
   "description": "yagikobo.com",
   "author": "Yasushi Kobayashi",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -49,6 +51,7 @@
     "@babel/core": "^7.27.1",
     "@biomejs/biome": "^1.9.4",
     "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^22.15.14",
     "@types/prop-types": "^15.7.14",
     "@types/react": "^18.3.21",
