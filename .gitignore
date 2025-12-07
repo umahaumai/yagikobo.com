@@ -3,14 +3,14 @@ node_modules/
 public
 src/gatsby-types.d.ts
 
-# yarn 
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# pnpm
+pnpm-lock.yaml
+.pnpm-store
 
 # mac
 .DS_Store
+
+# hugo
+.hugo_build.lock
+public
+resources

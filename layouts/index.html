@@ -1,0 +1,43 @@
+{{ define "main" }}
+<div class="flex flex-col items-center justify-center mb-12">
+  <img src="/images/logo.png" alt="Yagikobo.inc" class="w-64 h-64 mb-6" />
+  <h1 class="text-5xl font-bold tracking-widest mb-8">Yagikobo.inc</h1>
+</div>
+
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h2 class="card-title text-2xl mb-4">NEWS</h2>
+    <h3 class="text-3xl font-bold mb-6">ニュース</h3>
+    
+    <ul class="space-y-2">
+      {{ $news := where .Site.RegularPages "Section" "info" }}
+      {{ $news = where $news ".Params.open" true }}
+      {{ $news = $news.ByParam "updatedAt" | collections.Reverse }}
+      {{ $news = $news | first 5 }}
+      
+      {{ range $news }}
+      <li>
+        <a href="{{ .Permalink }}" class="flex items-center gap-4 p-4 hover:bg-base-200 rounded-lg transition-colors">
+          {{ if .Params.thumbnail }}
+          <img src="{{ .Params.thumbnail | replaceRE `^\\.\\./images/` `/images/` }}" 
+               alt="{{ .Params.thumbnail_alt | default .Title }}" 
+               class="w-12 h-12 rounded-full object-cover">
+          {{ else }}
+          <div class="w-12 h-12 rounded-full bg-base-300 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          {{ end }}
+          <div class="flex-1">
+            <p class="font-semibold">{{ .Title }}</p>
+            <p class="text-sm text-base-content/70">{{ .Params.updatedAt | time.Format "2006.01.02" }}</p>
+          </div>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}
+

@@ -1,0 +1,23 @@
+<header class="navbar bg-base-100 shadow-lg mb-8">
+  <div class="flex-1">
+    <a href="/" class="btn btn-ghost normal-case text-xl">
+      <img src="/images/logo.png" alt="Yagikobo.inc" class="w-12 h-12 mr-2" />
+      <span class="font-bold tracking-wider">Yagikobo.inc</span>
+    </a>
+  </div>
+  <nav class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">ホーム</a></li>
+      <li><a href="/info/">お知らせ</a></li>
+      <li><a href="/products/">製品・サービス</a></li>
+      <li><a href="/company/">会社概要</a></li>
+    </ul>
+  </nav>
+</header>
+
+{{ if .Params.title }}
+<div class="text-center mb-8">
+  <h1 class="text-4xl font-bold mb-4">{{ .Params.title }}</h1>
+</div>
+{{ end }}
+

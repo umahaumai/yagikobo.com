@@ -1,0 +1,12 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $class := .Get "class" | default "" }}
+
+{{ if hasPrefix $src "../" }}
+  {{ $src = $src | replaceRE `^\\.\\./images/` `/images/` }}
+{{ else if not (hasPrefix $src "/") }}
+  {{ $src = printf "/images/%s" $src }}
+{{ end }}
+
+<img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}">
+

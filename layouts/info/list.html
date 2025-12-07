@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div>
+  <div class="space-y-6">
+    {{ $news := where .Site.RegularPages "Section" "info" }}
+    {{ $news = where $news ".Params.open" true }}
+    {{ $news = $news.ByParam "updatedAt" | collections.Reverse }}
+    
+    {{ if not $news }}
+    <div class="text-center py-12">
+      <p class="text-lg text-base-content/70">お知らせはありません</p>
+    </div>
+    {{ else }}
+      {{ range $news }}
+      <div class="card bg-base-100 shadow-xl">
+        <div class="card-body">
+          {{ if .Params.thumbnail }}
+          <div class="flex items-center gap-4 mb-4">
+            <img src="{{ .Params.thumbnail | replaceRE `^\\.\\./images/` `/images/` }}" 
+                 alt="{{ .Params.thumbnail_alt | default .Title }}" 
+                 class="w-20 h-20 rounded-full object-cover">
+            <h2 class="card-title text-2xl">{{ .Title }}</h2>
+          </div>
+          {{ else }}
+          <h2 class="card-title text-2xl mb-4">{{ .Title }}</h2>
+          {{ end }}
+          
+          <div class="prose max-w-none mb-4 line-clamp-3">
+            {{ $content := .Content | replaceRE `<h1[^>]*>.*?</h1>` "" }}
+            {{ $content | truncate 200 }}
+          </div>
+          
+          <div class="card-actions justify-end">
+            <a href="{{ .Permalink }}" class="btn btn-primary">続きを読む</a>
+            <span class="text-sm text-base-content/70 self-center">
+              更新日: {{ .Params.updatedAt | time.Format "2006/01/02" }}
+            </span>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+

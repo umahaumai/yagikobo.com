@@ -1,0 +1,152 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title { font: bold 20px sans-serif; text-anchor: middle; fill: #333; }
+      .subtitle { font: 16px sans-serif; text-anchor: middle; fill: #555; }
+      .label { font: 12px sans-serif; text-anchor: middle; fill: #333; }
+      .small-label { font: 10px sans-serif; text-anchor: middle; fill: #666; }
+      .flow-text { font: 11px sans-serif; fill: #666; }
+      .section-title { font: bold 14px sans-serif; fill: #333; }
+      .gcp-box { fill: #4285f4; stroke: #4285f4; stroke-width: 2; }
+      .github-box { fill: #24292e; stroke: #24292e; stroke-width: 2; }
+      .client-box { fill: #34a853; stroke: #34a853; stroke-width: 2; }
+      .dev-box { fill: #ea4335; stroke: #ea4335; stroke-width: 2; }
+      .white-fill { fill: white; }
+      .arrow { stroke: #666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .dashed-arrow { stroke: #999; stroke-width: 1.5; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-light); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+    <marker id="arrowhead-light" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999" />
+    </marker>
+  </defs>
+
+  <!-- タイトル -->
+  <text x="600" y="30" class="title">yagikobo.com システム構成図</text>
+  <text x="600" y="50" class="subtitle">静的サイト配信 + 自動デプロイ構成</text>
+
+  <!-- 開発環境セクション -->
+  <rect x="50" y="80" width="280" height="200" rx="10" class="dev-box" opacity="0.1"/>
+  <text x="60" y="100" class="section-title" fill="#ea4335">開発環境</text>
+  
+  <!-- ローカル開発 -->
+  <rect x="70" y="120" width="100" height="60" rx="5" class="white-fill" stroke="#ea4335" stroke-width="1"/>
+  <text x="120" y="140" class="label">ローカル開発</text>
+  <text x="120" y="155" class="small-label">Gatsby.js</text>
+  <text x="120" y="167" class="small-label">TypeScript + MUI</text>
+
+  <!-- MDXコンテンツ -->
+  <rect x="200" y="120" width="100" height="60" rx="5" class="white-fill" stroke="#ea4335" stroke-width="1"/>
+  <text x="250" y="140" class="label">MDXコンテンツ</text>
+  <text x="250" y="155" class="small-label">ブログ記事</text>
+  <text x="250" y="167" class="small-label">お知らせ</text>
+
+  <!-- 開発ツール -->
+  <rect x="70" y="200" width="230" height="60" rx="5" class="white-fill" stroke="#ea4335" stroke-width="1"/>
+  <text x="185" y="220" class="label">開発ツール</text>
+  <text x="100" y="235" class="small-label">Git</text>
+  <text x="140" y="235" class="small-label">Cursor</text>
+  <text x="180" y="235" class="small-label">yarn</text>
+  <text x="220" y="235" class="small-label">Lighthouse</text>
+  <text x="270" y="235" class="small-label">Analytics</text>
+
+  <!-- GitHubセクション -->
+  <rect x="400" y="80" width="200" height="200" rx="10" class="github-box" opacity="0.1"/>
+  <text x="410" y="100" class="section-title" fill="#24292e">GitHub</text>
+
+  <!-- リポジトリ -->
+  <rect x="420" y="120" width="160" height="50" rx="5" class="white-fill" stroke="#24292e" stroke-width="1"/>
+  <text x="500" y="140" class="label">リポジトリ</text>
+  <text x="500" y="155" class="small-label">ソースコード + MDX</text>
+
+  <!-- GitHub Actions -->
+  <rect x="420" y="190" width="160" height="70" rx="5" class="white-fill" stroke="#24292e" stroke-width="1"/>
+  <text x="500" y="210" class="label">GitHub Actions</text>
+  <text x="500" y="225" class="small-label">自動ビルド</text>
+  <text x="500" y="237" class="small-label">自動デプロイ</text>
+  <text x="500" y="249" class="small-label">→ Cloud Storage</text>
+
+  <!-- GCPセクション -->
+  <rect x="670" y="80" width="480" height="200" rx="10" class="gcp-box" opacity="0.1"/>
+  <text x="680" y="100" class="section-title" fill="#4285f4">Google Cloud Platform</text>
+
+  <!-- Cloud Storage -->
+  <rect x="690" y="120" width="140" height="80" rx="5" class="white-fill" stroke="#4285f4" stroke-width="1"/>
+  <text x="760" y="140" class="label">Cloud Storage</text>
+  <text x="760" y="155" class="small-label">静的サイト配信</text>
+  <text x="760" y="167" class="small-label">バケット設定</text>
+  <text x="760" y="179" class="small-label">バージョニング</text>
+  <text x="760" y="191" class="small-label">バックアップ</text>
+
+  <!-- SSL証明書 -->
+  <rect x="860" y="120" width="120" height="50" rx="5" class="white-fill" stroke="#4285f4" stroke-width="1"/>
+  <text x="920" y="140" class="label">SSL証明書</text>
+  <text x="920" y="155" class="small-label">Google-managed</text>
+
+  <!-- IAM -->
+  <rect x="1010" y="120" width="120" height="50" rx="5" class="white-fill" stroke="#4285f4" stroke-width="1"/>
+  <text x="1070" y="140" class="label">IAM</text>
+  <text x="1070" y="155" class="small-label">アクセス制御</text>
+
+
+
+  <!-- クライアントセクション -->
+  <rect x="350" y="350" width="500" height="200" rx="10" class="client-box" opacity="0.1"/>
+  <text x="360" y="370" class="section-title" fill="#34a853">クライアント・アクセス</text>
+
+  <!-- ユーザーデバイス -->
+  <rect x="370" y="390" width="100" height="60" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="420" y="410" class="label">デスクトップ</text>
+  <text x="420" y="425" class="small-label">Chrome/Firefox</text>
+  <text x="420" y="437" class="small-label">Safari/Edge</text>
+
+  <rect x="500" y="390" width="100" height="60" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="550" y="410" class="label">タブレット</text>
+  <text x="550" y="425" class="small-label">レスポンシブ</text>
+  <text x="550" y="437" class="small-label">対応</text>
+
+  <rect x="630" y="390" width="100" height="60" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="680" y="410" class="label">モバイル</text>
+  <text x="680" y="425" class="small-label">モバイル</text>
+  <text x="680" y="437" class="small-label">最適化</text>
+
+  <!-- ドメイン -->
+  <rect x="750" y="390" width="80" height="60" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="790" y="410" class="label">ドメイン</text>
+  <text x="790" y="425" class="small-label">yagikobo</text>
+  <text x="790" y="437" class="small-label">.com</text>
+
+  <!-- Google Form -->
+  <rect x="370" y="480" width="150" height="50" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="445" y="500" class="label">Google Form</text>
+  <text x="445" y="515" class="small-label">お問い合わせ機能</text>
+
+  <!-- サイト特徴 -->
+  <rect x="550" y="480" width="280" height="50" rx="5" class="white-fill" stroke="#34a853" stroke-width="1"/>
+  <text x="690" y="495" class="label">サイト特徴</text>
+  <text x="610" y="510" class="small-label">SEO対策</text>
+  <text x="670" y="510" class="small-label">アクセシビリティ</text>
+  <text x="750" y="510" class="small-label">パフォーマンス最適化</text>
+  <text x="610" y="522" class="small-label">2秒以内ロード</text>
+  <text x="690" y="522" class="small-label">国内ユーザー向け</text>
+  <text x="770" y="522" class="small-label">CDN不使用</text>
+
+  <!-- データフロー -->
+  <!-- 開発→GitHub -->
+  <line x1="170" y1="150" x2="400" y2="145" class="arrow"/>
+  <text x="280" y="135" class="flow-text">git push</text>
+
+  <!-- GitHub→GCP -->
+  <line x1="580" y1="225" x2="670" y2="160" class="arrow"/>
+  <text x="620" y="185" class="flow-text">自動デプロイ</text>
+
+  <!-- GCP→クライアント -->
+  <line x1="760" y1="200" x2="680" y2="350" class="arrow"/>
+  <text x="720" y="280" class="flow-text">HTTPS配信</text>
+
+
+
+
+</svg>
