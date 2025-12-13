@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+/* メニュー用ボタンのクリック時の色反転を和らげる（PC版） */
+@media (min-width: 1024px) {
+  .menu a:active {
+    background-color: hsl(var(--bc) / 0.15) !important;
+    color: hsl(var(--bc)) !important;
+  }
+}
+
+/* 「続きを読む」ボタンのクリック時の色を和らげる（PC版） */
+@media (min-width: 1024px) {
+  .btn.bg-base-200:active {
+    background-color: hsl(var(--b2) / 0.9) !important;
+  }
+}
