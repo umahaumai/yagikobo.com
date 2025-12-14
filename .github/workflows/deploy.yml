@@ -13,7 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Hugo (extended)
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Setup Node.js (for Tailwind)
         uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -21,18 +27,17 @@ jobs:
       - name: Enable Corepack
         run: corepack enable
 
-      - name: Setup Yarn
-        run: |
-          yarn set version stable
-          yarn --version
-
       - name: Install dependencies
-        run: yarn install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build
-        run: yarn build
+      - name: Add node_modules/.bin to PATH
+        run: echo "${{ github.workspace }}/node_modules/.bin" >> "$GITHUB_PATH"
+
+      - name: Build (Hugo)
+        run: hugo --minify
         env:
-          GATSBY_ACTIVE_ENV: production
+          HUGO_ENVIRONMENT: production
+          NODE_ENV: production
 
       - name: Check GCP Secrets
         run: |

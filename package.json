@@ -4,64 +4,21 @@
   "private": true,
   "description": "yagikobo.com",
   "author": "Yasushi Kobayashi",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": [],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
     "hugo:dev": "hugo server",
     "hugo:build": "hugo --minify",
-    "hugo:serve": "hugo server"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mdx-js/react": "^3.1.0",
-    "@mui/icons-material": "^7.1.0",
-    "@mui/material": "^7.1.0",
-    "@types/hast": "^3.0.4",
-    "dayjs": "^1.11.13",
-    "gatsby": "^5.14.3",
-    "gatsby-plugin-google-gtag": "^5.14.0",
-    "gatsby-plugin-image": "^3.14.0",
-    "gatsby-plugin-manifest": "^5.14.0",
-    "gatsby-plugin-mdx": "^5.14.1",
-    "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sharp": "^5.14.0",
-    "gatsby-remark-images": "^7.14.0",
-    "gatsby-source-filesystem": "^5.14.0",
-    "gatsby-transformer-sharp": "^5.14.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "reading-time": "^1.5.0",
-    "rehype-highlight": "^7.0.2",
-    "rehype-raw": "^7.0.0",
-    "rehype-react": "^8.0.0",
-    "rehype-stringify": "^10.0.1",
-    "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.2",
-    "unified": "^11.0.5"
+    "format": "biome format --write .",
+    "lint": "biome lint ."
   },
   "devDependencies": {
-    "@babel/core": "^7.27.1",
     "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^22.15.14",
-    "@types/prop-types": "^15.7.14",
-    "@types/react": "^18.3.21",
-    "@types/react-dom": "^18.3.7",
-    "daisyui": "^5.0.0",
-    "prettier": "^3.5.3",
-    "prop-types": "^15.8.1",
-    "tailwindcss": "^4.0.0",
-    "textlint": "^14.7.1",
-    "typescript": "^5.8.3"
+    "daisyui": "^5.5.13",
+    "prettier": "^3.7.4",
+    "tailwindcss": "^4.1.18",
+    "textlint": "^14.8.4"
   },
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "pnpm@10.25.0"
 }
