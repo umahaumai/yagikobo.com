@@ -11,15 +11,14 @@
     "format": "biome format --write .",
     "lint": "biome lint ."
   },
-  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.0.0",
+    "@tailwindcss/cli": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
-    "daisyui": "^5.0.0",
-    "prettier": "^3.5.3",
-    "tailwindcss": "^4.0.0",
-    "textlint": "^14.7.1"
+    "daisyui": "^5.5.13",
+    "prettier": "^3.7.4",
+    "tailwindcss": "^4.1.18",
+    "textlint": "^14.8.4"
   },
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "pnpm@10.25.0"
 }
