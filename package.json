@@ -12,13 +12,13 @@
     "lint": "biome lint ."
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
-    "@tailwindcss/cli": "^4.1.18",
-    "@tailwindcss/typography": "^0.5.19",
-    "daisyui": "^5.5.13",
-    "prettier": "^3.7.4",
-    "tailwindcss": "^4.1.18",
-    "textlint": "^14.8.4"
+    "@biomejs/biome": "^2.5.9",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "daisyui": "^5.7.19",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
+    "textlint": "^15.8.0"
   },
   "packageManager": "pnpm@10.25.0"
 }
