@@ -69,7 +69,7 @@ pnpm format           # biome format --write
 scripts/validate.sh   # ビルド + lint の一括検証（変更後に実行）
 ```
 
-- ローカルの Hugo は `~/.local/bin/hugo`（v0.152.2 extended。本番の GitHub Actions は latest を使用）
+- ローカルの Hugo は `~/.local/bin/hugo`（v0.165.0 extended。本番の GitHub Actions は latest を使用）
 - Node.js + pnpm は必須（Tailwind が `tailwindcss` バイナリを呼ぶため）
 
 ## 6. デプロイとブランチ運用

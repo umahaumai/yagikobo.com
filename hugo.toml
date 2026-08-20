@@ -1,5 +1,5 @@
 baseURL = 'https://yagikobo.com'
-languageCode = 'ja'
+locale = 'ja'
 title = '株式会社やぎ工房'
 defaultContentLanguage = 'ja'
 
@@ -38,4 +38,8 @@ defaultContentLanguage = 'ja'
   [markup.highlight]
     style = "github"
     lineNos = true
+
+[security]
+  [security.exec]
+    allow = ['^(dart-)?sass$', '^go$', '^git$', '^node$', '^postcss$', '^tailwindcss$']
 
