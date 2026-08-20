@@ -4,159 +4,71 @@
 
 ### 1.1 使用技術
 
-- フレームワーク：Gatsby.js
-- 言語：TypeScript
-- UIライブラリ：mui
-- コンテンツ管理：MDX
-- デプロイ：GCP Cloud Storage
+- サイトジェネレータ：Hugo（extended）
+- CSS：Tailwind CSS v4（Hugo の `css.TailwindCSS`）+ DaisyUI 5
+- テンプレート：Go テンプレート（`layouts/`）
+- コンテンツ：Markdown（`content/`）
+- パッケージ管理：pnpm（Node.js 22+）
+- フォーマッタ / リンタ：Biome（JS/TS/JSON）、Prettier（Markdown）
 
 ### 1.2 開発ツール
 
-- バージョン管理：Git
-- リポジトリ：Github
-- エディタ：Cursor
-- パッケージ管理：yarn
+- バージョン管理：Git / GitHub
+- エディタ：Cursor / VS Code
+- 検証：`scripts/validate.sh`（ビルド + lint）
 
 ## 2. アーキテクチャ
 
 ### 2.1 全体構成
 
 - 静的サイト生成（SSG）
-- シングルページアプリケーション（SPA）
-- クライアントサイドルーティング
-- 配信：GCP Cloud Storage
+- 配信：GCP Cloud Storage（カスタムドメイン https://yagikobo.com、HTTPS）
+- デプロイ：GitHub Actions（`.github/workflows/deploy.yml`）
 
 ### 2.2 ディレクトリ構造
 
 ```
-src/
-  ├── pages/         # ページコンポーネント（Gatsby.js必須）
-  ├── components/    # 共通コンポーネント
-  ├── templates/     # ページテンプレート
-  ├── contents/      # MDXコンテンツ
-  ├── info/          # お知らせ用MDXコンテンツ
-  └── utils/         # ユーティリティ関数
+content/
+  ├── info/*.md        # お知らせ（permalink: /info/:slug/）
+  ├── products/*.md    # 製品・サービス（permalink: /products/:slug/）
+  └── company.md       # 会社概要
+layouts/               # Hugo テンプレート
+assets/                # ビルド対象アセット（Tailwind 入力等）
+static/                # そのまま配信される静的ファイル（画像等）
+scripts/               # 検証スクリプト
 ```
 
-## 3. 機能仕様
+## 3. デプロイメント
 
-### 3.1 ページ構成
+### 3.1 デプロイフロー
 
-- トップページ：会社概要、サービス紹介
-- ブログページ：MDXによる記事管理
-- お問い合わせ：Google Form埋め込み
+1. フィーチャーブランチで変更 → ローカルで `scripts/validate.sh` 実行
+2. main へ **PR** を作成（main 直 push は禁止）
+3. マージで GitHub Actions が実行され、`hugo --minify` でビルド後 `gsutil rsync` で GCS バケットへ配信
 
-### 3.2 コンテンツ管理
-
-- MDXファイルによる記事管理
-- Githubへのプッシュで自宅サーバへデプロイ
-- 画像はGithubリポジトリで管理
-
-## 4. デプロイメント
-
-### 4.1 デプロイフロー
-
-1. ローカル開発
-2. Githubへのプッシュ
-3. GCP Cloud Storageへのデプロイ
-
-### 4.2 環境設定
+### 3.2 環境設定
 
 - 本番環境：GCP Cloud Storage
-- ドメイン設定：カスタムドメイン対応
-- HTTPS：GCP Cloud Storage
+- ドメイン：カスタムドメイン（yagikobo.com）
+- HTTPS：GCP Cloud Storage + カスタムドメイン設定
 
-## 5. パフォーマンス要件
+## 4. 性能要件
 
-- ページロード時間：2秒以内
-- コアウェブバイタル対応
-- 画像最適化
-- コード分割
+- ページロード時間：2 秒以内
+- 静的ファイル配信による高速化
+- 画像は適宜 WebP 等を利用
 
-## 6. セキュリティ要件
+## 5. セキュリティ要件
 
-- HTTPS通信（GCP Cloud Storage）
-- セキュリティヘッダー設定
-- 依存パッケージの定期的な更新
+- HTTPS 通信
+- 依存パッケージの定期更新（`pnpm audit`）
 
-## 7. 保守性要件
+## 6. モニタリング
 
-- コード規約の遵守
-- コンポーネントの再利用性
-- ドキュメント整備
-- テスト環境の整備
+- Google Analytics（GA4: G-9ZJW5T93CE）でトラフィック計測
 
-## 8. パフォーマンス最適化
+## 7. ドキュメント
 
-### 8.1 画像最適化
-
-- Gatsby Imageの活用
-- WebP形式の使用
-- 遅延読み込みの実装
-- 適切なサイズの画像提供
-
-### 8.2 コード最適化
-
-- コード分割
-- ツリーシェイキング
-- キャッシュ戦略
-
-## 9. SEO対策
-
-### 9.1 メタデータ
-
-- 適切なtitleタグ
-- meta description
-- OGP対応
-
-### 9.2 構造化データ
-
-- JSON-LDの実装
-- サイトマップの生成
-
-## 10. アクセシビリティ
-
-### 10.1 WCAG準拠
-
-- キーボード操作対応
-- スクリーンリーダー対応
-- コントラスト比の確保
-
-### 10.2 セマンティックHTML
-
-- 適切なHTML要素の使用
-- ARIA属性の適切な使用
-
-## 11. テスト戦略
-
-- 不要
-
-## 12. モニタリング
-
-### 12.1 パフォーマンスモニタリング
-
-- Lighthouse
-
-### 12.2 エラートラッキング
-
-- Google Analytics
-
-## 13. セキュリティ
-
-### 13.1 セキュリティ対策
-
-- 不要
-
-### 13.2 データ保護
-
-- 不要
-
-## 14. ドキュメント
-
-### 14.1 開発ドキュメント
-
-- コードコメント
-
-### 14.2 運用ドキュメント
-
-- 不要
+- `AGENTS.md`：AI エージェント向け指示書（最優先）
+- `docs/plans.md`：現在地と次の作業
+- `README.md`：セットアップ手順
