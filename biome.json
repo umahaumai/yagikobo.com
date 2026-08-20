@@ -1,4 +1,8 @@
 {
+  "$schema": "https://biomejs.dev/schemas/2.5.9/schema.json",
+  "files": {
+    "includes": ["**/*.{js,ts,jsx,tsx,json}", "!**/node_modules", "!**/tsconfig.json"]
+  },
   "formatter": {
     "indentStyle": "space",
     "lineWidth": 120
