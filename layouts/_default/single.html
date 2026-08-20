@@ -8,8 +8,7 @@
     {{ end }}
     <article class="prose prose-lg max-w-none prose-p:text-base prose-ul:list-disc prose-ol:list-decimal prose-li:my-2 prose-a:text-primary prose-strong:font-bold prose-code:text-sm prose-pre:bg-base-200 prose-pre:text-base-content">
       {{ $content := .Content }}
-      {{ $content = $content | replaceRE `!\[([^\]]*)\]\(([^)]+)\)` (printf `![$1](%s$2)` "/images/") }}
-      {{ $content = $content | replaceRE `src="\\.\\./images/` `src="/images/` }}
+      {{ $content = $content | replaceRE `src="(\.\./)*images/` `src="/images/` }}
       {{ $content = $content | replaceRE `<h1([^>]*)>([^<]+)</h1>` `<h1 class="card-title text-3xl mb-6 mx-4">$2</h1>` }}
       {{ $content = $content | replaceRE `<h2([^>]*)>([^<]+)</h2>` `<div class="divider my-6"></div><h2 class="card-title text-2xl mb-4">$2</h2>` }}
       {{ $content = $content | replaceRE `<h3([^>]*)>([^<]+)</h3>` `<h3 class="text-xl font-bold mt-6 mb-3 text-base-content">$2</h3>` }}

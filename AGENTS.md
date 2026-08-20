@@ -26,7 +26,7 @@ content/
   └── company.md       # 会社概要
 layouts/               # Hugo テンプレート
 assets/                # ビルド対象アセット（Tailwind 入力等）
-static/                # そのまま配信される静的ファイル
+static/                # そのまま配信される静的ファイル（画像は /images/ で参照）
 ```
 
 ## 4. お知らせ記事のフロントマター規約
@@ -50,6 +50,13 @@ open: true
 - `createdAt` は JST（+09:00）で記述
 - 本文は Markdown。見出しは `##` から始める
 - タイトルには「【お知らせ】」プレフィックスを使う慣習
+
+### 記事内で画像を使う場合
+
+- 画像ファイルは `static/images/` 配下に配置する（記事用は `static/images/info/` 等）
+- Markdown 記法: `![代替テキスト](/images/info/xxx.png)`（絶対パスが基本）
+- `../images/...` の相対パスでも可（`layouts/_default/single.html` が `/images/` へ正規化する）
+- shortcode: `{{< image src="../images/info/xxx.png" alt="..." >}}` も利用可（同様に正規化）
 
 ## 5. 開発コマンド
 
